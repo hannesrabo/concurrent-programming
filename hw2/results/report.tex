@@ -1,0 +1,95 @@
+\documentclass[journal]{IEEEtran}
+%\documentclass[11pt,twoside,a4paper]{article}
+
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+
+%\usepackage[swedish]{babel}
+\usepackage[backend=bibtex, citestyle=ieee, bibstyle=ieee]{biblatex}
+\addbibresource{ref.bib}
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+\title{Homework 1 \\Critical Sections, Locks, Barriers and Conditional Variables }
+
+\author{Hannes~Rabo, \textit{Information and Communication Technology}, KTH}
+
+
+% The paper headers
+\markboth{Homework 1 - Concurrent Programming (ID1217) - KTH}%
+{}
+
+% make the title area
+\maketitle
+
+
+% Note that keywords are not normally used for peerreview papers.
+%\begin{IEEEkeywords}
+% IEEE, IEEEtran, journal, \LaTeX, paper, template.
+%\end{IEEEkeywords}
+
+\IEEEPARstart{IN}{} this homework we study performance of different approaches to concurrent computation. It focuses on matrix operations (sum, min and max) as well as approximation for PI.
+
+\newpage
+\onecolumn
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{compare-all}
+\caption{Execution time as a function of number of workers using OpenMP. Overview}
+\label{fig:all}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{compare-midrange}
+\caption{Execution time as a function of number of workers using OpenMP. Middle region}
+\label{fig:mid}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{compare-lowrange}
+\caption{Execution time as a function of number of workers using OpenMP. Lower region}
+\label{fig:low}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{../result-pal/comparison}
+\caption{Execution time as a function of number of workers. Comparison between batch size. Processor with 2 cores and 4 hardware threads.}
+\label{fig:comparison}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{../result-pal-24/comparison}
+	\caption{Execution time as a function of number of workers. Comparison between batch size. Processor with 24 cores}
+	\label{fig:comparison-24}
+\end{figure}
+
+
+
+
+\printbibliography
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+%
+%% you can choose not to have a title for an appendix
+%% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here.
+%
+
+\end{document}
+
+

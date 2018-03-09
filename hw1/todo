@@ -1,0 +1,22 @@
+MATRIX
+(a) calculate the max and minimum value. Print position and value for both
+(b) Change the program developed in (a) so that the main thread prints the final results. 
+    Do not call the Barrier function, and do not use arrays for partial results, 
+    such as  sums in the above example.
+    -- Really inefficient because of the dynamic allocation
+(c) Change the program developed in (b) so that it uses a "bag of tasks" that is represented as a row counter, 
+    which is initialized to 0. A worker gets a task (i.e. the number of the row to process) out of the bag by 
+    reading a value of the counter and incrementing the counter as described for the matrix multiplication 
+    problem in Slides 27-29 about "bag of tasks" in Lecture 5.
+
+PI
+The points on a unit circle centered at the origin are defined by the function f(x) = sqrt(1-x^2). 
+Recall that the area of a circle is pi*r2, where r is radius. The adaptive quadrature routine described 
+in Lecture 1 can be used to approximate the value of pi computing the area of the upper-right quadrant 
+of a unit circle then multiplying  the result by 4. Develop a multithreaded program (in C using Pthreads 
+or in Java) to compute pi for a given epsilon using a given number of processes (threads) np which is 
+assumed to a command-line argument (i.e. it's given). Performance evaluation: Measure and print also the 
+execution time of your program using the times function or the gettimeofday function (see 
+how it is done in matrixSum.c. To calculate the execution 
+time, read the clock after you have initialized all variables and just before you create the threads. 
+Read the clock again as soon as the computation is complete and the worker threads have terminated.
